@@ -1,0 +1,190 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles with a modern background and smooth transition */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(135deg, rgba(34, 193, 195, 0.9), rgba(253, 187, 45, 0.9)), url('https://www.w3schools.com/w3images/doctor.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  transition: background-color 0.5s ease;
+}
+
+/* Container with a polished, glassy effect */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.85); /* Slight transparency */
+  padding: 50px;
+  border-radius: 30px; /* More rounded corners */
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px); /* Glass effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styles with health-themed vibrant colors */
+h1 {
+  font-size: 3rem;
+  color: #1abc9c;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Lora', serif;
+  transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+h1:hover {
+  color: #16a085;
+}
+
+/* Search input and button styles with smooth animations */
+input[type="text"] {
+  padding: 16px;
+  width: 80%;
+  max-width: 500px;
+  border: 2px solid #3498db;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #1abc9c;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+button {
+  padding: 16px 24px;
+  width: 80%;
+  max-width: 500px;
+  background: linear-gradient(135deg, #27ae60, #2ecc71); /* Gradient button */
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 35px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  transform: translateY(-5px);
+}
+
+button:active {
+  background: linear-gradient(135deg, #1e8449, #27ae60);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Results container with flexbox and animations */
+#results {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Doctor information card with hover effects */
+.doctor {
+  background: #ecf0f1;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 550px;
+}
+
+.doctor:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.doctor h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.doctor p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+}
+
+.doctor strong {
+  color: #2c3e50;
+}
+
+/* Add space between each doctor card */
+.doctor:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  input[type="text"], button {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .doctor {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  input[type="text"], button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .doctor {
+    padding: 20px;
+  }
+}
